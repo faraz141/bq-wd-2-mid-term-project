@@ -9,6 +9,8 @@ nav {
     background-color: rgb(22, 21, 22);
     position: sticky;
     top: 0;
+    padding: 0.5rem 1rem;
+    z-index: 1000; /* Ensures the navbar is always on top */
 }
 
 nav .title {
@@ -19,10 +21,10 @@ nav .title {
     color: white;
 }
 
-
 nav ul {
     display: flex;
-
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
@@ -33,63 +35,71 @@ nav ul li a {
     display: block;
     text-decoration: none;
     color: white;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     border-radius: 0.5rem;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
-
 
 nav ul li a:not(.active):hover {
-    background-color: rgb(2, 2, 73);
+    background-color: rgb(236, 25, 25);
+    color: black;
+    font-weight: 500; /* Ensures text color remains white on hover */
 }
 
-
-nav .menu{
+nav .menu {
     display: none;
     position: absolute;
     top: 0.75rem;
-    right: 0.5rem;
+    right: 1rem;
     flex-direction: column;
     justify-content: space-between;
     width: 2.25rem;
     height: 2rem;
+    cursor: pointer;
 }
 
 nav .menu span {
-    height: 0.5rem;
+    height: 0.25rem;
     width: 100%;
     background-color: white;
     border-radius: 0.2rem;
-
+    transition: background-color 0.3s; /* Smooth transition for background color */
 }
-@media (max-width:480px) {
-    nav.menu{
+
+nav .menu:hover span {
+    background-color: rgb(236, 25, 25);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav .menu {
         display: flex;
     }
-    nav {
-      flex-direction: column;
-      align-items: start;
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(22, 21, 22);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin: 0;
+        padding: 0;
     }
-   nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 0.25rem;
-   } 
-     nav ul.open{
+    
+    nav ul.open {
         display: flex;
-     }
-
-
-   nav ul li {
-    width: 100%;
-    text-align: center;
-   }
-   nav ul li a {
-    margin: 0.2rem 0.5rem;
-   }
-
-
-
-
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        margin: 0.2rem 0;
+        padding: 1rem;
+    }
 }

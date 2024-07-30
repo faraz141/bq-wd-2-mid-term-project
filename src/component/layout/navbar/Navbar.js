@@ -18,20 +18,19 @@ const Navbar = () => {
         <span></span>
         <span></span>
         <span></span>
-        <span></span>
       </div>
       <ul className={menuOpen ? "open" : ""}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={toggleMenu}>Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about" onClick={toggleMenu}>About</Link>
         </li>
         <li>
-          <Link to="/services">Services</Link>
+          <Link to="/services" onClick={toggleMenu}>Services</Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={toggleMenu}>Contact</Link>
         </li>
       </ul>
     </nav>
@@ -39,3 +38,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

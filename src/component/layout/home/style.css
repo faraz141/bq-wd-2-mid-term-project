@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 
 .background {
@@ -34,6 +35,7 @@
   z-index: 2; /* Ensure content is above the overlay */
   color: white;
   text-align: center;
+  padding: 20px;
 }
 
 .header {
@@ -41,21 +43,17 @@
 }
 
 .header h1 {
-  font-size: 4em;
+  font-size: 3em;
 }
 
 .header p {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .search-section {
   padding: 20px;
   border-radius: 10px;
-  /* display: flex; */
-  flex-direction: row;
-  align-items: center;
   color: black; /* Text color inside search section */
-
 }
 
 .buttons {
@@ -70,26 +68,30 @@
   border: none;
   cursor: pointer;
   border-radius: 10px;
-  transition: ease-inS;
+  transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effect */
 }
 
-/* .buttons .btn-rent, .buttons .btn-sale:hover{
-  background-color: #f5f5f5;
-  color: #1c1c1c;
-  transform: scale(0.8);
-} */
+.buttons .btn-rent:hover, .buttons .btn-sale:hover {
+  background-color: red;
+  color: black;
+  font-weight: 600;
+  transform: scale(1.05); /* Added scale transform on hover */
+}
 
 .search-boxes {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 5rem;
+  gap: 1rem;
   background: rgba(255, 255, 255, 0.8);
   padding: 20px 30px;
   border-radius: 10px;
+  flex-wrap: wrap; /* Allow items to wrap */
 }
-.search-boxes input{
-  width: 300px;
+
+.search-boxes input, .search-boxes select, .search-boxes button {
+  width: 100%;
+  max-width: 140px;
 }
 
 .search-boxes .input-keyword, 
@@ -108,4 +110,54 @@
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effect */
+}
+
+.search-boxes .btn-find:hover {
+  background-color: darkred;
+  transform: scale(1.05); /* Added scale transform on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .search-boxes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-boxes input, .search-boxes select, .search-boxes button {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  .buttons .btn-rent, .buttons .btn-sale {
+    padding: 15px 10px;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  .header p {
+    font-size: 0.8em;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons .btn-rent, .buttons .btn-sale {
+    margin: 5px 0;
+  }
 }
