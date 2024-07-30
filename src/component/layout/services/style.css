@@ -1,0 +1,147 @@
+.services {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+  }
+  
+  .header h2 {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .header h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .view-all {
+    display: block;
+    margin-top: 2rem;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+  }
+  
+  .view-all:hover {
+    color: darkred;
+  }
+  
+  .service {
+    background-color: white;
+    /* border: 1px solid #ccc;
+    border-radius: 10px; */
+    padding: 1rem;
+    margin: 1rem;
+    width: 25%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service .buy-icon, .service .rent-icon, .service .sell-icon,
+  .service .insurance-icon, .service .renovation-icon, .service .mortgage-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100px; /* Adjust height based on icon size */
+    margin-bottom: 1rem;
+  }
+  
+  .service .buy-icon {
+    background-image: url('https://png.pngtree.com/png-clipart/20191121/original/pngtree-buying-a-home-icon-simple-style-png-image_5151772.jpg'); /* Replace with actual path */
+  }
+  
+  .service .rent-icon {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/602/602320.png'); /* Replace with actual path */
+  }
+  
+  .service .sell-icon {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6BCKNLQEcCveRny2I0PZmXd3ef89lyyKl5w&s'); /* Replace with actual path */
+  }
+  
+  .service .insurance-icon {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUyMFDFPw0uJ3HQRFsELsH0JsbBxZJ_E0e7A&s'); /* Replace with actual path */
+  }
+  
+  .service .renovation-icon {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2iEPrxf-qWmVXrC6bLuE-4k0FblVyBuUzng&s'); /* Replace with actual path */
+  }
+  
+  .service .mortgage-icon {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfHDoB3NfLfVdLQiz35jDn4FGVIBYr5Nxj6w&s'); /* Replace with actual path */
+  }
+  
+  .service h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .service p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service .learn-more {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .service .learn-more:hover {
+    color: darkred;
+  }
+  
+  .view-all {
+    display: inline;
+    margin-top: 2rem;
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  
+  .view-all:hover {
+    color: darkred;
+  }
+  .learn-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .learn-more:hover {
+    color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .service {
+      width: 80%;
+    }
+  }
+  
