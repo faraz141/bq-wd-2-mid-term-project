@@ -11,10 +11,11 @@ const Navbar = () => {
 
   return (
     <nav>
-      <Link to="/" className="title">
+      <Link to="/" className="title" onClick={toggleMenu}>
         Website
       </Link>
       <div className="menu" onClick={toggleMenu}>
+        <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -32,10 +33,12 @@ const Navbar = () => {
         <li>
           <Link to="/contact" onClick={toggleMenu}>Contact</Link>
         </li>
+        <li>
+          <Link to="/properties" onClick={toggleMenu}>Properties</Link>
+        </li>
       </ul>
     </nav>
   );
 };
 
 export default Navbar;
-

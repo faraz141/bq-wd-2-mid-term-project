@@ -1,9 +1,3 @@
-// import React from "react"
-// const Home = () => {
-//     return <div>Home</div>
-    
-// }
-// export default Home
 import React, { useState } from 'react';
 import './style.css';
 
@@ -25,10 +19,10 @@ const Home = () => {
           <p>We are a real estate agency that will help you find the best residence you dream of, let's discuss for your dream house?</p>
         </div>
         <div className="search-section">
-        <div className="buttons">
+          <div className="buttons">
             <button className="btn-rent">FOR RENT</button>
             <button className="btn-sale">FOR SALE</button>
-        </div>
+          </div>
           <div className="search-boxes">
             <input type="text" placeholder="Search Keyword" className="input-keyword" />
             <input type="text" placeholder="Search Location" className="input-location" />
