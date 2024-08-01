@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './style.css';
-
 const Home = () => {
   const [text, setText] = useState('Real Estate');
 

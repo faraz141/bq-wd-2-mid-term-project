@@ -117,7 +117,6 @@
   background-color: darkred;
   transform: scale(1.05); /* Added scale transform on hover */
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   .header h1 {

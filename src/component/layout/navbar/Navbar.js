@@ -31,11 +31,12 @@ const Navbar = () => {
           <Link to="/services" onClick={toggleMenu}>Services</Link>
         </li>
         <li>
-          <Link to="/contact" onClick={toggleMenu}>Contact</Link>
-        </li>
-        <li>
           <Link to="/properties" onClick={toggleMenu}>Properties</Link>
         </li>
+        <li>
+          <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+        </li>
+       
       </ul>
     </nav>
   );
