@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+// import Footer from '../footer/footer';
 import './style.css'; // Ensure to create and link the CSS file
 import { useNavigate } from 'react-router-dom';
 
@@ -112,6 +113,7 @@ const Properties = () => {
   };
 
   return (
+    <>
     <section className="properties">
       <h1>Properties</h1>
       <h2>Featured Properties</h2>
@@ -144,6 +146,7 @@ const Properties = () => {
         <button className="view-all-btn" onClick={handleViewAll}>View All Properties →</button>
       </div>
     </section>
+    </>
   );
 };
 

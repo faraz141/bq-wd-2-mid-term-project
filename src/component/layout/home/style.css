@@ -1,4 +1,3 @@
-/* RealEstate.css */
 .container {
   position: relative;
   height: 100vh;
@@ -53,6 +52,7 @@
 .search-section {
   padding: 20px;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
   color: black; /* Text color inside search section */
 }
 
@@ -83,7 +83,6 @@
   flex-direction: row;
   align-items: center;
   gap: 1rem;
-  background: rgba(255, 255, 255, 0.8);
   padding: 20px 30px;
   border-radius: 10px;
   flex-wrap: wrap; /* Allow items to wrap */
@@ -91,7 +90,7 @@
 
 .search-boxes input, .search-boxes select, .search-boxes button {
   width: 100%;
-  max-width: 140px;
+  max-width: 130px;
 }
 
 .search-boxes .input-keyword, 
@@ -117,6 +116,7 @@
   background-color: darkred;
   transform: scale(1.05); /* Added scale transform on hover */
 }
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .header h1 {

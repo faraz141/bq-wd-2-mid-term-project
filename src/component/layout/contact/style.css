@@ -1,0 +1,68 @@
+.contact-page {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #fff;
+}
+.contact{
+  background-image: url("https://homezennextjs.vercel.app/_next/static/media/slider-1.4ff3abf6.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  
+}
+.contact-form{
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+.contact-form input, .contact-form textarea, .contact-form button{
+  width: 100%;
+  max-width: 600px;
+}
+.contact-us{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 600;
+  color: red;
+  background-color: #fff;
+  padding: 20px;
+}
+.contact-page h1{
+  color: red;
+  font-size: 40px;
+  font-weight: 600;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: red;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-info {
+  margin-top: 40px;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+}

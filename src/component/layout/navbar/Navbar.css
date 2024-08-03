@@ -14,11 +14,19 @@ nav {
 }
 
 nav .title {
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
     margin: 1rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
+}
+
+nav .title .logo {
+    max-height: 40px; /* Adjust as needed */
+    margin-right: 0.5rem;
+    max-width: 80px;
 }
 
 nav ul {

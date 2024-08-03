@@ -1,5 +1,6 @@
 // AboutUs.js
 import React, { useState } from 'react';
+// import Footer from '../footer/footer';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -39,6 +40,7 @@ const About = () => {
   };
 
   return (
+    <>
     <section className="about">
       <h2>About Us</h2>
       <div className="about-content">
@@ -84,6 +86,8 @@ const About = () => {
         ))}
       </div>
     </section>
+    {/* <Footer/> */}
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+// import Footer from '../footer/footer';
 import './style.css';
 
 const servicesData = [
@@ -52,6 +53,7 @@ const Services = () => {
   };
 
   return (
+    <>
     <section className="services">
       <div className="header">
         <h2>Our Services</h2>
@@ -71,6 +73,8 @@ const Services = () => {
         <button onClick={handleShowAll} className="view-all">View All Services →</button>
       )}
     </section>
+    {/* <Footer/> */}
+    </>
   );
 };
 

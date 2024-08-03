@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to="/" className="title" onClick={toggleMenu}>
-        Website
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMS2V5wahpDrd1Cu0A5ujl6hSM8wZyATJprw&s" alt="Website Logo" className="logo" /> Real Estate
       </Link>
       <div className="menu" onClick={toggleMenu}>
         <span></span>
@@ -36,7 +36,6 @@ const Navbar = () => {
         <li>
           <Link to="/contact" onClick={toggleMenu}>Contact</Link>
         </li>
-       
       </ul>
     </nav>
   );

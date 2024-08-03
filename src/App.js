@@ -1,6 +1,7 @@
 import React, { useEffect} from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./component/layout/navbar/Navbar";
+import Footer from "./component/layout/footer/footer";
 import Home from "./component/layout/home/home";
 import About from "./component/layout/about/About";
 import Services from "./component/layout/services/Services";
@@ -22,12 +23,13 @@ const App = () => {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home/>} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/properties" element={<Properties />} />
       </Routes>
+      <Footer/>
     </>
   );
 };
