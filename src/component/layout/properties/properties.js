@@ -289,6 +289,7 @@ const Properties = () => {
   const { keyword, searchLocation, price, type } = location.state || {};
   
   const [propertyList, setPropertyList] = useState(initialProperties);
+  const [arraylist, setArrayList] = useState(arr)
   
 
   useEffect(() => {
@@ -315,7 +316,12 @@ const Properties = () => {
 
   const handleViewAll = () => {
     setPropertyList([...propertyList, ...arr]);
+    setArrayList([arraylist])
   };
+  //   const handleViewAll = () => {
+//     setPropertyList([...propertyList, ...arr]);
+//     // setArrayList([arraylist])
+//   };
 
   const handleLearnMore = (property) => {
     navigate("/", { state: { fromProperties: true } });

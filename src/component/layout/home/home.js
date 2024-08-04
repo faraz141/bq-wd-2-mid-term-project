@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 // import Footer from '../footer/footer';
 import About from '../about/About';
 import Services from '../services/Services';
-import Properties from '../properties/properties';
+// import Properties from '../properties/properties';
 import Contact from '../contact/Contact';
 import './style.css';
 
@@ -78,7 +78,6 @@ const Home = () => {
       </section>
       <About/>
       <Services/>
-      <Properties/>
       <Contact/>
       {/* <Footer /> */}
     </>
