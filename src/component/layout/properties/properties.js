@@ -284,13 +284,24 @@ const initialProperties = [
 //   );
 // };
 const Properties = () => {
-  const location = useLocation();
+  const [keyword, setKeyword] = useState('');
+  const [searchLocation, setSearchLocation] = useState('');
+  const [price, setPrice] = useState('');
+  const [type, setType] = useState('all');
   const navigate = useNavigate();
-  const { keyword, searchLocation, price, type } = location.state || {};
-  
+  const location = useLocation();
+
+  const { keyword: initialKeyword, searchLocation: initialSearchLocation, price: initialPrice, type: initialType } = location.state || {};
+
   const [propertyList, setPropertyList] = useState(initialProperties);
-  const [arraylist, setArrayList] = useState(arr)
-  
+  const [arrayList, setArrayList] = useState(arr);
+
+  useEffect(() => {
+    setKeyword(initialKeyword || '');
+    setSearchLocation(initialSearchLocation || '');
+    setPrice(initialPrice || '');
+    setType(initialType || 'all');
+  }, [initialKeyword, initialSearchLocation, initialPrice, initialType]);
 
   useEffect(() => {
     let filteredProperties = arr;
@@ -304,7 +315,7 @@ const Properties = () => {
     }
 
     if (price) {
-      filteredProperties = filteredProperties.filter(property => parseFloat(property.rent.replace(/[^0-9.-]+/g,"")) <= parseFloat(price));
+      filteredProperties = filteredProperties.filter(property => parseFloat(property.rent.replace(/[^0-9.-]+/g, "")) <= parseFloat(price));
     }
 
     if (type && type !== 'all') {
@@ -314,14 +325,14 @@ const Properties = () => {
     setPropertyList(filteredProperties.length > 0 ? filteredProperties : arr);
   }, [keyword, searchLocation, price, type]);
 
-  const handleViewAll = () => {
-    setPropertyList([...propertyList, ...arr]);
-    setArrayList([arraylist])
+  const handleFindProperties = () => {
+    navigate('/properties', { state: { keyword, searchLocation, price, type } });
   };
-  //   const handleViewAll = () => {
-//     setPropertyList([...propertyList, ...arr]);
-//     // setArrayList([arraylist])
-//   };
+
+  const handleViewAll = () => {
+    setPropertyList([...propertyList, ...arrayList]);
+    setArrayList([]);
+  };
 
   const handleLearnMore = (property) => {
     navigate("/", { state: { fromProperties: true } });
@@ -330,6 +341,40 @@ const Properties = () => {
   return (
     <section className="properties">
       <h1>Properties</h1>
+      <div className="search-boxes-properties">
+        <input
+          type="text"
+          placeholder="Search Keyword"
+          className="input-keyword"
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Search Location"
+          className="input-location"
+          value={searchLocation}
+          onChange={(e) => setSearchLocation(e.target.value)}
+        />
+        <input
+          type="number"
+          placeholder="$price"
+          className="input-price"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        />
+        <select
+          className="input-type"
+          value={type}
+          onChange={(e) => setType(e.target.value)}
+        >
+          <option value="all">All</option>
+          <option value="HOUSE">House</option>
+          <option value="OFFICE">Office</option>
+          <option value="STUDIO">Studio</option>
+        </select>
+        <button className="btn-find" onClick={handleFindProperties}>Find Properties</button>
+      </div>
       <h2>Featured Properties</h2>
       <div className="property-list">
         {propertyList.map((property) => (
@@ -352,7 +397,7 @@ const Properties = () => {
               <p>{property.agent}</p>
             </div>
             <p className="property-price">{property.rent}</p>
-            <button className="learn-more" onClick={() => handleLearnMore(property)}><h3>Learn More →</h3></button>
+            <button className="learn-more" onClick={() => handleLearnMore(property)}>Learn More →</button>
           </div>
         ))}
       </div>

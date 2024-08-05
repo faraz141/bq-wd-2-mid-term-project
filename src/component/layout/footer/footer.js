@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const Footer = () => {
@@ -21,19 +22,19 @@ const Footer = () => {
           <div className="footer-categories">
             <h4>Categories</h4>
             <ul>
-              <li><a href="#pricing">Pricing Plans</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link to="/properties">Pricing Plans</Link></li>
+              <li><Link to="/services">Our Services</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
           <div className="footer-company">
             <h4>Our Company</h4>
             <ul>
-              <li><a href="#sale">Property For Sale</a></li>
-              <li><a href="#rent">Property For Rent</a></li>
-              <li><a href="#buy">Property For Buy</a></li>
-              <li><a href="#agents">Our Agents</a></li>
+              <li><Link to="/properties">Property For Sale</Link></li>
+              <li><Link to="/properties">Property For Rent</Link></li>
+              <li><Link to="/properties">Property For Buy</Link></li>
+              <li><Link to="/about">Our Agents</Link></li>
             </ul>
           </div>
         </div>
@@ -62,9 +63,9 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>&copy;2024 Homzen. All Rights Reserved.</p>
         <ul>
-          <li><a href="/">Terms Of Services</a></li>
-          <li><a href="/">Privacy Policy</a></li>
-          <li><a href="/">Cookie Policy</a></li>
+          <li><Link to="/">Terms Of Services</Link></li>
+          <li><Link to="/">Privacy Policy</Link></li>
+          <li><Link to="/">Cookie Policy</Link></li>
         </ul>
         <a href="/" className="scroll-top"><i className="fas fa-arrow-up"></i></a>
       </div>

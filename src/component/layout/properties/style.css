@@ -15,6 +15,39 @@
   font-weight: 400;
   text-align: center;
 }
+.search-boxes-properties {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px 30px;
+  border-radius: 10px;
+  flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.search-boxes-properties input, .search-boxes-properties select, .search-boxes-properties button {
+  width: 100%;
+  max-width: 220px;
+}
+
+.search-boxes-properties .input-keyword, 
+.search-boxes-properties .input-location, 
+.search-boxes-properties .input-type, 
+.search-boxes-properties .input-price, 
+.search-boxes-properties .btn-find {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-boxes-properties .btn-find {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transition for hover effect */
+}
 
 .property-list {
   display: flex;
@@ -167,7 +200,17 @@
   .properties h2 {
     font-size: 25px;
   }
+  .search-boxes-properties {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
+  .search-boxes-properties input, .search-boxes-properties select, .search-boxes-properties button {
+    max-width: 100%;
+    margin: 5px 0;
+  }
+
+  /*  */
   .property-item {
     flex: 1 1 calc(100% - 10px);
     margin: 10px 0;
